@@ -1,0 +1,9 @@
+{
+  "name": "superwhisper",
+  "version": "1.0.0",
+  "description": "Superwhisper voice integration - get voice notifications when tasks complete. Speak your next command immediately after Claude finishes.",
+  "author": {
+    "name": "Superwhisper",
+    "email": "support@superwhisper.com"
+  }
+}

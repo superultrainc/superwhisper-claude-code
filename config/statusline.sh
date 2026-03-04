@@ -44,21 +44,12 @@ fi
 # Time with am/pm
 TIME=$(date +"%I:%M %p")
 
-# Superwhisper status (env var overrides UserDefaults)
-if pgrep -f "DerivedData.*superwhisper.app" >/dev/null 2>&1; then
-    SW_BUNDLE="com.superduper.superwhisper.debug"
-else
-    SW_BUNDLE="com.superduper.superwhisper"
-fi
-
-if [ "$SUPERWHISPER_AGENT" = "1" ]; then
-    SW="✓ superwhisper"
-elif [ "$SUPERWHISPER_AGENT" = "0" ]; then
+# Superwhisper status (per-project flag set by /superwhisper skill)
+SW_CWD_HASH=$(echo -n "$PWD" | md5 -q 2>/dev/null || echo -n "$PWD" | md5sum | cut -d' ' -f1)
+if [ -f "/tmp/superwhisper-agent/disabled-${SW_CWD_HASH}" ] || [ "$SUPERWHISPER_AGENT" = "0" ]; then
     SW="✗ superwhisper"
-elif defaults read "$SW_BUNDLE" agentIntegrationEnabled 2>/dev/null | grep -q 1; then
-    SW="✓ superwhisper"
 else
-    SW="✗ superwhisper"
+    SW="✓ superwhisper"
 fi
 
 echo "[$MODEL] ${DIR##*/}${GIT_INFO:+ | $GIT_INFO} | $CONTEXT | $SW | $TIME"

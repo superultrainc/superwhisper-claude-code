@@ -15,7 +15,7 @@
         "name": "Superwhisper",
         "email": "support@superwhisper.com"
       },
-      "source": ".",
+      "source": "./",
       "category": "productivity",
       "homepage": "https://superwhisper.com"
     }

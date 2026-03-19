@@ -4,22 +4,22 @@ Voice integration between Superwhisper and Claude Code. When Claude Code complet
 
 ## Installation
 
-### Option 1: Plugin Marketplace (Recommended)
-
 ```bash
-# Add the Superwhisper marketplace (one-time)
-claude plugin marketplace add github:superultrainc/superwhisper-claude-code
-
-# Install the plugin
-claude plugin install superwhisper
-
-# Restart Claude Code to activate
+curl -fsSL https://superwhisper.com/install/claude-code | bash
 ```
+
+Then restart Claude Code to activate.
 
 To verify installation:
 ```bash
-# Check enabled plugins
 cat ~/.claude/settings.json | grep superwhisper
+```
+
+### Manual install
+
+```bash
+claude plugin marketplace add superultrainc/superwhisper-claude-code
+claude plugin install superwhisper
 ```
 
 ### Option 2: Use with --plugin-dir flag

@@ -5,7 +5,7 @@ Voice integration between Superwhisper and Claude Code. When Claude Code complet
 ## Installation
 
 ```bash
-curl -fsSL https://superwhisper.com/install/claude-code | bash
+curl -fsSL https://superwhisper.com/install-claude-code.sh | bash
 ```
 
 Then restart Claude Code to activate.

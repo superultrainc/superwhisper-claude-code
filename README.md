@@ -56,12 +56,10 @@ superwhisper-claude-code/
 
 ## How It Works
 
-1. You give Claude Code a task
-2. Claude Code works on the task
-3. When the agent finishes, the `Stop` hook fires
-4. The hook calls Superwhisper via deeplink
-5. Superwhisper shows a notification with the task status
-6. You can respond by voice
+1. You start Claude Code on a task
+2. When the agent needs you Superwhisper opens over any other windows or workflows
+3. You respond by voice, typing or selecting an option
+4. The agent starts working away again
 
 ## Verification
 
@@ -82,8 +80,3 @@ To verify the plugin is loaded, run `/hooks` in Claude Code to see registered ho
 claude --debug
 # Look for hook-related messages in debug output
 ```
-
-## Dependencies
-
-- Python 3 (for URL encoding)
-- Optional: `jq` for better JSON parsing

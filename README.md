@@ -2,7 +2,7 @@
 
 Voice integration between Superwhisper and Claude Code. When Claude Code completes a task, Superwhisper shows a notification so you can respond by voice.
 
-> **Requirements:** macOS only. Requires [Superwhisper](https://superwhisper.com/download) 2.13 or later.
+> Currently only available for [Superwhisper](https://superwhisper.com/download) versions 2.13 or later on macOS.
 
 ## Installation
 

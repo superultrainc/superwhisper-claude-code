@@ -11,6 +11,16 @@
         ]
       }
     ],
+    "StopFailure": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_HOOK:-/Applications/superwhisper.app/Contents/Resources/claude-hook}"
+          }
+        ]
+      }
+    ],
     "Notification": [
       {
         "hooks": [

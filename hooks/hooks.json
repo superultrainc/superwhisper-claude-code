@@ -16,7 +16,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "${CLAUDE_HOOK:-/Applications/superwhisper.app/Contents/Resources/claude-hook}"
+            "command": "H=\"${CLAUDE_HOOK:-/Applications/superwhisper.app/Contents/Resources/claude-hook}\"; \"$(dirname \"$H\")/agent-hook\" supports claude StopFailure 2>/dev/null || exit 0; exec \"$H\""
           }
         ]
       }
